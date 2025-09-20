@@ -108,5 +108,81 @@ Built with **TypeScript, Express.js, Mongoose, and REST APIs**, and deployed on 
 ---
 
 ## 🏠 Root  
-- **GET** `/` → Health check → `"Server is running..."`  
+- **GET** `/` → Health check → `"Server is running..."`
+
+
+
+````markdown
+# ⚙️ Installation & Setup  
+
+## 1️⃣ Clone the repository  
+```bash
+git clone https://github.com/Sohag-Ahmed056/AmarPay-BackendApi.git
+cd AmarPay-BackendApi
+````
+
+---
+
+## 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+## 3️⃣ Setup environment variables
+
+Create a **.env** file in the root directory and add the following:
+
+```env
+PORT=5000
+NODE_ENV=development
+MONGODB_URI=your-mongodb-uri
+SALT_ROUND=10
+JWT_ACCESS_SECRET=your-access-secret
+JWT_ACCESS_EXPIRES=15m
+JWT_REFRESH_SECRET=your-refresh-secret
+JWT_REFRESH_EXPIRES=7d
+```
+
+---
+
+## 4️⃣ Run the application
+
+```bash
+npm run dev
+```
+
+---
+
+## ✅ Available Scripts
+
+* `npm run dev` → Run in development mode (with nodemon)
+* `npm run build` → Build project for production
+* `npm start` → Run compiled production build
+
+---
+
+## 🏃 Health Check
+
+After running, visit:
+
+```
+http://localhost:5000/
+```
+
+Response:
+
+```json
+{
+  "message": "Server is running..."
+}
+```
+
+```
+
+
+
+
 
