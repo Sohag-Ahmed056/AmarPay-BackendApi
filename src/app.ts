@@ -10,7 +10,13 @@ dotenv.config();
 
 export const app = express();
 
-app.use(cors()); 
+app.use(cors({
+  origin: [
+      "https://amarpay-frontend.vercel.app", // your deployed frontend
+      "http://localhost:5173", // optional: for local development
+    ], // ✅ allow specific origin(s)
+  credentials: true,                 // ✅ allow cookies/auth
+}));
 
 app.use(express.json())
 app.use(cookieParser())

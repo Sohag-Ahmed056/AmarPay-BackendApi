@@ -44,7 +44,7 @@ const userSchema = new Schema({
         type: String,
         default: ''
     },
-    isDateleted: {
+    isDeleted: {
         type: Boolean,
         default: false,
     },

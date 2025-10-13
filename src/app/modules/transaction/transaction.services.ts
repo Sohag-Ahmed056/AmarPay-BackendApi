@@ -435,8 +435,8 @@ const cashOut = async (payload: ICashOutPayload, decodedToken: JwtPayload) => {
     // Agents commision
     const agentCommision = cashOutCharge * (Number(agentCommistionInPercentage) / 100)
 
-    // Payra pay will get
-    const payraPaywillGet = cashOutCharge - agentCommision
+
+    const userWillGet = cashOutCharge - agentCommision
 
     // agent will get total
     const agentsTotal = Number(cashOutAmount) + agentCommision
@@ -525,7 +525,7 @@ const cashOut = async (payload: ICashOutPayload, decodedToken: JwtPayload) => {
         totalAmountWithCharge: totalAmountWithCashOutCharge,
         charge: cashOutCharge,
         agentCommision: agentCommision,
-        payraPayGot: payraPaywillGet,
+        userGot: userWillGet,
         numberFrom: cashOutUser.phone,
         numberTo: userAgent.phone,
         status: TRANSACTION_STATUS.COMPLETED,

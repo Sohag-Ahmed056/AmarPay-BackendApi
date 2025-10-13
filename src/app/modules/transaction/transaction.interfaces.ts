@@ -40,7 +40,7 @@ export interface ITransaction {
     totalAmountWithCharge?: number,
     charge?: number,
     agentCommision?: number,
-    payraPayGot?: number,
+    userGot?: number,
     numberFrom?: string,
     numberTo?: string,
     fee?: number,

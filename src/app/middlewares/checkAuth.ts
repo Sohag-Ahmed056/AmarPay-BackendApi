@@ -37,7 +37,7 @@ export const checkAuth = (...authRoles: string[]) => async (req: Request, res: R
         }
 
         // If user is deleted
-        if (existingUser.isDateleted) {
+        if (existingUser.isDeleted) {
             throw new AppError(StatusCodes.BAD_REQUEST, `User is Deleted`)
         }
 
