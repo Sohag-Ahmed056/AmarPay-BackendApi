@@ -49,7 +49,7 @@ const transactionSchema = new Schema({
     agentCommision: {
         type: Number,
     },
-    payraPayGot: {
+    userGot: {
         type: Number,
     },
     status: {
