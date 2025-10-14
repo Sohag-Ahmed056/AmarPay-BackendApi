@@ -46,17 +46,18 @@ const credentialLogin = catchAsync(async (req: Request, res: Response, next: Nex
 })
 
 // Logout
+// enVars.NODE_ENV === 'production
 const logOut = catchAsync(
   async (req: Request, res: Response) => {
     res.clearCookie("accessToken", {
       httpOnly: true,
-      secure: enVars.NODE_ENV === 'production',
+      secure:true,
       sameSite: 'none',
     });
 
     res.clearCookie("refreshToken", {
       httpOnly: true,
-      secure: enVars.NODE_ENV === 'production',
+      secure: true,
       sameSite: 'none',
     });
 
